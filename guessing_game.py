@@ -20,8 +20,10 @@ def start_game():
     1. Display an intro/welcome message to the player.
     """
     print('Welcome to the number guessing game!\nBy Renee Louise Brinkman')
+
     """2. Store a random number as the answer/solution."""
-    
+    answer = random.randint(1, 10)
+
     """3. Continuously prompt the player for a guess.
       a. If the guess greater than the solution, display to the player "It's lower".
       b. If the guess is less than the solution, display to the player "It's higher".
