@@ -28,7 +28,11 @@ def start_game():
     guess_correct = False
     attempts = 0
     while not guess_correct:
-        guess = int(input('Try guessing a number between 1 and 10! '))
+        try:
+            guess = int(input('Try guessing a number between 1 and 10! '))
+        except ValueError:
+            print('Your input is not a valid number between 1 and 10. Please try again.')
+            continue
 
         """a. If the guess greater than the solution, display to the player "It's lower".
         b. If the guess is less than the solution, display to the player "It's higher".
