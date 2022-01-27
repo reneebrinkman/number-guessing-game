@@ -32,12 +32,16 @@ def start_game():
     """
     print('Welcome to the number guessing game!\nBy Renee Louise Brinkman')
 
+    high_score = 10
     playing = True
     while playing:
 
 
         """2. Store a random number as the answer/solution."""
         answer = random.randint(1, 10)
+
+        print(f'High Score: {high_score} tries')
+        print('Can you guess correctly in less tries?')
 
         """3. Continuously prompt the player for a guess."""
         guess_correct = False
@@ -69,6 +73,10 @@ def start_game():
         """4. Once the guess is correct, stop looping, inform the user they "Got it"
              and show how many attempts it took them to get the correct number."""
         print(f'Yes! You got it! It took you {attempts} tries to guess correctly.')
+
+        if attempts < high_score:
+            high_score = attempts
+            print('Congratulations! You beat the high score!')
 
         playing = check_play_again()
 
