@@ -8,4 +8,4 @@ It is a simple game where you guess a random number between 1 and 10.
 
 Needs only a python interpreter to run:
 
-$ python guessing_game.py
+`$ python guessing_game.py`
